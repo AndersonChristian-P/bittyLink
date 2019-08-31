@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>Jello World!!!</div>
+      <div>This is the start of my Bit.ly UI clone</div>
+      <div>Goal is to clone out the UI of Bit.ly for my site with the following mvp:</div>
+      <ul>
+        <li>Shorten links on the homepage</li>
+        <li>Register and login</li>
+        <li>As a registered user you can save your shortened links, modify saved links to get a new shortened link, and delete saved shortened links</li>
+        <li>The site will also be responsive</li>
+        <li>There will be cross-browser compatibility, accessibility (ADA compliance, ARIA (Accessible Rich Internet Applications) where applicable)</li>
+      </ul>
     </div>
   );
 }
