@@ -16,7 +16,7 @@ VALUES (
 -- // BITTYLINK USER LOGIN // --
 CREATE TABLE bittylink_user_login (
   bittylink_login_id SERIAL PRIMARY KEY,
-  email VARCHAR(75)
+  email VARCHAR(75),
   password TEXT
 );
 
