@@ -38,7 +38,41 @@ module.exports = {
       lastname: user[0].lastname,
       user_id: user[0].login_id
     })
-
     // really consider what you want to put on session and on the reducer
+  },
+
+  login: async (req, res) => {
+    const db = req.app.get("db")
+    const { session } = req
+    const { loginEmail, loginPassword } = req.body
+
+    try {
+      let user = await db.login({ loginEmail })
+
+      const authenticated = bcrypt.compareSync(loginPassword, user[0].password)
+
+      if (authenticated) {
+
+        session.user = {
+          authenticated: true,
+          email: user[0].email,
+          user_id: user[0].login_id,
+          firstname: user[0].firstname,
+          lastname: user[0].lastname
+        }
+
+        res.status(200).send({
+          authenticated,
+          email: user[0].email,
+          user_id: user[0].login_id,
+          firstname: user[0].firstname,
+          lastname: user[0].lastname
+        })
+      } else {
+        throw new Error(401)
+      }
+    } catch (err) {
+      res.sendStatus(401)
+    }
   }
 }

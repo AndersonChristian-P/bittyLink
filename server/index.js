@@ -36,3 +36,5 @@ massive(CONNECTION_STRING).then((database) => {
 // -- ENDPOINTS -- //
 
 // Authentication
+app.post('/auth/register', authCtrl.register)
+app.post('auth/login', authCtrl.login)
