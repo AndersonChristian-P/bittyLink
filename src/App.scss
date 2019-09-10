@@ -1,0 +1,17 @@
+//  -- FONTS -- //
+
+// -- SNIPPETS -- //
+@import "./components/Header/Header";
+
+// -- RESET -- //
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// -- BASE SETUP -- //
+body {
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
