@@ -2,9 +2,9 @@ import React from "react"
 
 const Header = () => {
   return (
-    <div>
-      Jello World!
-    </div>
+    <>
+      This is the Header
+    </>
   )
 }
 
