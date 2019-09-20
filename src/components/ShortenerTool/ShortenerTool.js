@@ -10,12 +10,16 @@ class ShortenerTool extends Component {
 
   handleChange = event => {
     this.setState({
-      longURL: event.target.value
+      longUrl: event.target.value
     })
   }
 
   handleSubmit = () => {
-    console.log("HERE IS YOUR SHORTENED URL")
+    console.log(`HERE IS YOUR SHORTENED URL`)
+    // code will go here to send the long URL to the server side where it will be shortened and then returned
+    this.setState({
+      longUrl: ""
+    })
   }
 
   render() {
@@ -28,6 +32,7 @@ class ShortenerTool extends Component {
         <input
           type="text"
           placeholder="Shorten your link"
+          value={this.state.longUrl}
           onChange={this.handleChange}
         />
         <button onClick={this.handleSubmit}>Shorten</button>
