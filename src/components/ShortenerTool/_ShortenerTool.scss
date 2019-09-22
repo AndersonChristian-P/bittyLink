@@ -1,1 +1,36 @@
-// remove inline styling from component before proceeding
+.shortenerTool {
+  border: 2px solid yellow;
+  width: 100%;
+  // text-align: center;
+  height: 215px;
+  background-color: #0A1836;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  .shortenerTool__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    input {
+      padding: 20px;
+      width: 800px;
+      height: 61px;
+      font-size: 20px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      width: 280px;
+      height: 60px;
+      border-radius: 5px;
+      font-size: 20px;
+      background-color: #1B3987;
+      color: #ffffff;
+      border: none;
+      margin-left: 30px;
+    }
+  }
+}

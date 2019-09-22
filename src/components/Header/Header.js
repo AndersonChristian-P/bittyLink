@@ -3,7 +3,10 @@ import React from "react"
 const Header = () => {
   return (
     <>
-      This is the Header
+      <header className="header">
+        <div>BittyLink</div>
+        <div>This is the Header</div>
+      </header>
     </>
   )
 }

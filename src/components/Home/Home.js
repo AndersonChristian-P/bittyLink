@@ -3,9 +3,9 @@ import ShortenerTool from "../ShortenerTool/ShortenerTool"
 
 const Home = () => {
   return (
-    <>
+    <div className="home">
       <ShortenerTool />
-    </>
+    </div>
   )
 }
 
