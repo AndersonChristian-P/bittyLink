@@ -28,7 +28,7 @@ module.exports = {
 
     session.user = {
       email,
-      user_id: user[0].login_id
+      user_id: user[0].bittylink_login_id
     }
 
     res.status(200).send({
@@ -36,7 +36,7 @@ module.exports = {
       email: user[0].email,
       firstname: user[0].firstname,
       lastname: user[0].lastname,
-      user_id: user[0].login_id
+      user_id: user[0].bittylink_login_id
     })
     // really consider what you want to put on session and on the reducer
   },
@@ -56,7 +56,7 @@ module.exports = {
         session.user = {
           authenticated: true,
           email: user[0].email,
-          user_id: user[0].login_id,
+          user_id: user[0].bittylink_login_id,
           firstname: user[0].firstname,
           lastname: user[0].lastname
         }
@@ -64,7 +64,7 @@ module.exports = {
         res.status(200).send({
           authenticated,
           email: user[0].email,
-          user_id: user[0].login_id,
+          user_id: user[0].bittylink_login_id,
           firstname: user[0].firstname,
           lastname: user[0].lastname
         })
