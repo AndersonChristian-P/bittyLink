@@ -17,7 +17,7 @@ const ShortenerTool = () => {
 
   // --JSX-- //
   return (
-    <div className="shortenerTool2">
+    <div className="shortenerTool">
 
       <div className="shortenerTool__container">
         <input
