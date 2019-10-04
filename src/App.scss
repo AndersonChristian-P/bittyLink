@@ -1,4 +1,5 @@
 //  -- FONTS -- //
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam:100,300,400,500,600,700,800|Playfair+Display:400,700,900|Roboto:300,400,500,700,900&display=swap');
 
 // -- SNIPPETS -- //
 @import "./components/Header/Header";
@@ -19,6 +20,9 @@ html, body {
 // -- BASE SETUP -- //
 body {
   font-size: 1em;
+  // font-family: 'Roboto', sans-serif;
+  // font-family: 'Be Vietnam', sans-serif;
+  font-family: 'Playfair Display', serif;
   text-rendering: optimizeLegibility;
   background: #FFFFFF;
   height: 100vh;
