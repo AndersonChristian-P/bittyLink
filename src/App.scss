@@ -7,14 +7,20 @@
 @import "./components/Menu/Menu";
 
 // -- RESET -- //
-* {
+html, body {
   margin: 0;
   padding: 0;
+}
+
+*, *::after, *::before {
   box-sizing: border-box;
 }
 
 // -- BASE SETUP -- //
 body {
   font-size: 1em;
+  text-rendering: optimizeLegibility;
+  background: #FFFFFF;
+  height: 100vh;
   text-rendering: optimizeLegibility;
 }
