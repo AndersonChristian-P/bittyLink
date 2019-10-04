@@ -1,11 +1,12 @@
 import React from "react"
+import Menu from "../Menu/Menu"
 
 const Header = () => {
   return (
     <>
       <header className="header">
-        <div>BittyLink</div>
-        <div>This is the Header</div>
+        <div>BittyLink Logo</div>
+        <Menu />
       </header>
     </>
   )
