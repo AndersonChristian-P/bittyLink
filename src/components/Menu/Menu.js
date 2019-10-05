@@ -15,25 +15,29 @@ const Menu = () => {
   return (
     <div>
 
-      <i class="fas fa-bars fa-2x" onClick={() => handleMenu()}></i>
+      <span>
+        <Link to="#">Log In</Link>
+        <Link to="#">Sign Up</Link>
+      </span>
 
-      {!showMenu ? null :
-        <div className="hamburgerMenu">
+      <span>
+        <i class="fas fa-bars fa-2x" onClick={() => handleMenu()}></i>
 
-          <div className="hamburgerMenu_items">
-            <ul>
-              <Link className="nav_link" to="/" onClick={() => handleMenu()} >
-                <li>Home</li>
-              </Link>
-              <Link className="nav_link" to="#" onClick={() => handleMenu()} >
-                <li>Sign Up / Log in</li>
-              </Link>
-              <li>Logout</li>
-            </ul>
+        {!showMenu ? null :
+          <div className="hamburgerMenu">
+
+            <div className="hamburgerMenu_items">
+              <ul>
+                <Link className="nav_link" to="/" onClick={() => handleMenu()} >
+                  <li>Home</li>
+                </Link>
+                <li>Logout</li>
+              </ul>
+            </div>
+
           </div>
-
-        </div>
-      }
+        }
+      </span>
 
     </div>
   )
