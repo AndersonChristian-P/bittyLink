@@ -1,46 +1,57 @@
-import React, { useState } from "react"
+import React, { Component } from "react"
 import { Link, withRouter } from "react-router-dom"
 
-const Menu = () => {
+class Menu extends Component {
 
-  // --STATE-- //
-  const [showMenu, setShowMenu] = useState(false)
+  constructor() {
+    super()
+
+    this.state = {
+      showMenu: false
+    }
+  }
 
   // --METHODS-- //
-  const handleMenu = () => {
-    setShowMenu(!showMenu)
+  handleMenu = () => {
+    this.setState({
+      showMenu: !this.state.showMenu
+    })
   }
 
   // --JSX-- //
-  return (
-    <div>
+  render() {
 
-      <span>
-        <Link to="#">Log In</Link>
-        <Link to="#">Sign Up</Link>
-      </span>
+    return (
+      <div>
 
-      <span>
-        <i class="fas fa-bars fa-2x" onClick={() => handleMenu()}></i>
+        <span>
+          <Link to="#">Log In</Link>
+          <Link to="#">Sign Up</Link>
+        </span>
 
-        {!showMenu ? null :
-          <div className="hamburgerMenu">
+        <span>
+          <i class="fas fa-bars fa-2x" onClick={() => this.handleMenu()}></i>
 
-            <div className="hamburgerMenu_items">
-              <ul>
-                <Link className="nav_link" to="/" onClick={() => handleMenu()} >
-                  <li>Home</li>
-                </Link>
-                <li>Logout</li>
-              </ul>
+          {!this.state.showMenu ? null :
+            <div className="hamburgerMenu">
+
+              <div className="hamburgerMenu_items">
+                <ul>
+                  <Link className="nav_link" to="/" onClick={() => this.handleMenu()} >
+                    <li>Home</li>
+                  </Link>
+                  <li>Logout</li>
+                </ul>
+              </div>
+
             </div>
+          }
+        </span>
 
-          </div>
-        }
-      </span>
-
-    </div>
-  )
+      </div >
+    )
+  }
 }
+
 
 export default withRouter(Menu)
